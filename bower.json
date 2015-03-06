@@ -1,0 +1,16 @@
+{
+  "name": "ResumeAdmin.Web",
+  "version": "0.0.1",
+  "authors": [
+    "jrezuke <j.rezuke@verizon.net>"
+  ],
+  "description": "Resume admin front end",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
