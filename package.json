@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jrezuke/ResumeAdmin.WebApi/issues"
   },
-  "homepage": "https://github.com/jrezuke/ResumeAdmin.WebApi"
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-inject": "^1.2.0",
+    "gulp-load-plugins": "^0.8.1"
+  }
 }
