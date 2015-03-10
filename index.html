@@ -3,18 +3,23 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Resume Admin</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-cerulean.min.css"/>
+    <link rel="stylesheet" href="styles/main.css">
 
 </head>
 <body>
-    <navbar></navbar>
-    <ui-view></ui-view>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<div id="applicationHost" class="container body-content admin-appHost">
+    <div data-ng-include="'app/layout/shell.html'"></div>
+</div>
 
-    <!-- inject:js -->
-    <script src="app/app.js"></script>
-    <script src="app/layout/navbar.js"></script>
-    <!-- endinject -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<!-- inject:js -->
+<script src="app/app.js"></script>
+<script src="app/layout/navbar.js"></script>
+<script src="app/layout/shell.controller.js"></script>
+<!-- endinject -->
 </body>
 </html>
