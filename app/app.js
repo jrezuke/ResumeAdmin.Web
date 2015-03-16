@@ -7,9 +7,20 @@
     app.config(function ($stateProvider, $urlRouterProvider) {
 
         $stateProvider
-            .state("home", { url: "/home", templateUrl: "app/home/home.html" })
-            .state("resumes", { url: "/resumes", templateUrl: "app/resumes/resumes.html" })
-            .state("admin", { url: "/admin", templateUrl: "app/admin/admin.html" });
+            .state("home", {
+                url: "/home",
+                templateUrl: "app/home/home.html"
+            })
+            .state("resumes", {
+                url: "/resumes",
+                templateUrl: "app/resumes/resumes.html",
+                controller: "ResumeController",
+                controllerAs: "vm"
+            })
+            .state("admin", {
+                url: "/admin",
+                templateUrl: "app/admin/admin.html"
+            });
         $urlRouterProvider.otherwise("/home");
 
     });
