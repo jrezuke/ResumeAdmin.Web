@@ -5,21 +5,24 @@
         .module('app')
         .controller('ResumeModalController', ResumeModalController);
 
-    ResumeModalController.$inject = ['$modal'];
+    ResumeModalController.$inject = ['$modalInstance', 'personalInfosInit'];
 
     /* @ngInject */
-    function ResumeModalController($modal) {
+    function ResumeModalController($modalInstance, personalInfosInit) {
         /* jshint validthis: true */
         var vm = this;
+        vm.title = 'Add New Resume';
+        vm.resume = {};
+        vm.personalInfos = personalInfosInit;
+        vm.selectedPersonalInfo = {};
 
-        vm.activate = activate;
-        vm.title = 'ResumeModalController';
+        vm.save = function(){
+            vm.resume.personalInfoId = vm.selectedPersonalInfo.id;
+            $modalInstance.close(vm.resume);
+        }
 
-        activate();
-
-        ////////////////
-
-        function activate() {
+        vm.cancel = function(){
+            $modalInstance.dismiss('cancel');
         }
     }
 })();

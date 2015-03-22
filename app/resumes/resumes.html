@@ -6,7 +6,7 @@
             <th>Id</th>
             <th>Name</th>
             <th>Description</th>
-            <th></th>
+            <th>Personal Info Id</th>
         </tr>
         </thead>
         <tbody>
@@ -14,10 +14,11 @@
                 <td>{{resume.id}}</td>
                 <td>{{resume.name}}</td>
                 <td>{{resume.description}}</td>
+                <td>{{resume.personalInfoId}}</td>
             </tr>
             <tr>
-                <td><a class="btn"><span tooltip="Click here to add a new resume" class="glyphicon glyphicon-plus"></span></a></td>
-                <td><a class="btn" >Add new resume</button></a>
+                <td><a class="btn" ng-click="vm.add()"><span tooltip="Click here to add a new resume" class="glyphicon glyphicon-plus"></span></a></td>
+                <td><a class="btn" ng-click="vm.add()">Add new resume</button></a>
             </tr>
         </tbody>
     </table>

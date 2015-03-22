@@ -15,7 +15,12 @@
                 url: "/resumes",
                 templateUrl: "app/resumes/resumes.html",
                 controller: "ResumeController",
-                controllerAs: "vm"
+                controllerAs: "vm",
+                resolve: {
+                    initialResumes: function(resumeService){
+                        return resumeService.getResumesShort();
+                    }
+                }
             })
             .state("admin", {
                 url: "/admin",
