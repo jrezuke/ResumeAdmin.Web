@@ -2,7 +2,7 @@
     'use strict';
 
     var app = angular
-        .module('app', ['ui.router', 'ui.bootstrap']);
+        .module('app', ['ui.router', 'ui.bootstrap', 'nsPopover']);
 
     app.config(function ($stateProvider, $urlRouterProvider) {
 
