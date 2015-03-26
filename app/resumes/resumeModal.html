@@ -14,7 +14,7 @@
         <div class="form-group">
             <label class="col-sm-3 control-label">Select Personal Info:</label>
             <div class="col-sm-9">
-                <select class="form-control" ng-model="vm.selectedPersonalInfoId" ng-options="personalInfo.id as personalInfo.name for personalInfo in vm.personalInfos"></select>
+                <select class="form-control" ng-model="vm.selectedPersonalInfo" ng-options="personalInfo as personalInfo.name for personalInfo in vm.personalInfos"></select>
             </div>
         </div>
 
