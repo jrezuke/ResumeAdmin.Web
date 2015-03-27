@@ -14,10 +14,10 @@
         vm.title = 'Add New Resume';
         vm.resume = {};
         vm.personalInfos = personalInfosInit;
-        vm.selectedPersonalInfo = {};
+        vm.selectedPersonalInfoId = 0;
 
         vm.save = function(){
-            vm.resume.personalInfoId = vm.selectedPersonalInfo.id;
+            vm.resume.personalInfoId = vm.selectedPersonalInfoId;
             $modalInstance.close(vm.resume);
         }
 
