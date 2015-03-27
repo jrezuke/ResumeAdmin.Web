@@ -11,7 +11,7 @@
             <option ng-repeat="item in vm.items" value="{{item}}">{{item}}</option>
         </select>
         <select ng-model="vm.selected2" >
-            <option ng-repeat="item in vm.items2" value="{{item.age}}">{{item.name}}</option>
+            <option ng-repeat="item in vm.items2" value="{{item.id}}">{{item.name}}</option>
         </select>
         <select ng-model="selectedItem" ng-options="item.name for item in vm.items2">
         </select>
