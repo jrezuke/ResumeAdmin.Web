@@ -19,6 +19,7 @@
             openModal('lg');
         };
 
+
         activate();
 
         ////////////////
