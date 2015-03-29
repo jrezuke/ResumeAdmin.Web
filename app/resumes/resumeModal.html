@@ -5,21 +5,35 @@
     <form role="form">
         <div class="form-group">
             <label for="resumeName">Name</label>
-            <input type="text" id="resumeName" class="form-control" ng-model="vm.resume.name" placeholder="name" />
+            <input type="text" id="resumeName" class="form-control" ng-model="vm.resume.name" placeholder="name"/>
         </div>
         <div class="form-group">
             <label for="resumeDescription">Description</label>
-            <input type="text" id="resumeDescription" class="form-control" ng-model="vm.resume.description" placeholder="description" />
+            <input type="text" id="resumeDescription" class="form-control" ng-model="vm.resume.description"
+                   placeholder="description"/>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Select Personal Info:</label>
+
             <div class="col-sm-9">
+                <div ng-repeat="pi in vm.personalInfos">
+                    <label ng-controller="ResumeModalItemController as vmItem" ng-mouseenter="vmItem.showInfo()" ng-mouseleave="vmItem.hideInfo()">
+                        <input ng-model="$parent.vm.selectedPersonalInfoId" value="{{pi.id}}" name="personalInfo" type="radio"/>
+                        {{pi.name}}
+                    </label>
+                </div>
+                selected id: {{vm.selectedPersonalInfoId}}
                 <!--<select class="form-control" ng-model="vm.selectedPersonalInfo" ng-options="personalInfo as personalInfo.name for personalInfo in vm.personalInfos"></select>-->
-                <select class="form-control" ng-model="vm.selectedPersonalInfoId">
-                    <option ng-mouseover="vm.showInfo()" ng-mouseleave="vm.hideInfo()" ng-repeat="personalInfo in vm.personalInfos" value="{{personalInfo.id}}">
+                <!--<select class="form-control" ng-model="vm.selectedPersonalInfoId">
+                    <option ng-controller="ResumeModalItemController as vmItem" ng-mouseenter="vmItem.showInfo()" ng-mouseleave="vmItem.hideInfo()" ng-repeat="personalInfo in vm.personalInfos" value="{{personalInfo.id}}">
                         {{personalInfo.name}}
                     </option>
-                </select>
+                </select>-->
+                <!--<ul>
+                    <li ng-repeat="pi in vm.personalInfos" ng-controller="ResumeModalItemController as vmItem" ng-mouseenter="vmItem.showInfo()" ng-mouseleave="vmItem.hideInfo()">
+                        {{pi.name}}
+                    </li>
+                </ul>-->
             </div>
         </div>
 

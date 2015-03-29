@@ -15,13 +15,7 @@
         vm.resume = {};
         vm.personalInfos = personalInfosInit;
         vm.selectedPersonalInfoId = 0;
-        vm.showInfo = function(){
-            console.log("showInfo");
-        }
 
-        vm.hideInfo = function(){
-            console.log("hideInfo");
-        }
         vm.save = function(){
             vm.resume.personalInfoId = vm.selectedPersonalInfoId;
             $modalInstance.close(vm.resume);
