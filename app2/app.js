@@ -10,9 +10,17 @@
             {id:2, name: 'two', age: 20, othersId:2 },
             {id:3, name: 'three', age: 30, othersId:1 }];
         vm.items = ['one','two','three','four']
-    })
+    });
 
-
+    app.directive('testOn', function(){
+        return({
+            link:function(scope, el){
+                    el.on ('mouseenter', function(){
+                        console.log('dir mouseover');
+                    });
+                }
+        })
+    });
     /*app.run(function () {
      //do something before the app runs
      });*/

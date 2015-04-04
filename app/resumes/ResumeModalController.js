@@ -25,6 +25,12 @@
             $modalInstance.dismiss('cancel');
         };
 
+        vm.showInfo = function(){
+            console.log("showInfo");
+        }
 
+        vm.hideInfo = function(){
+            console.log("hideInfo");
+        }
     }
 })();
