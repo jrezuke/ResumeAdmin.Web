@@ -22,12 +22,20 @@
 
         </div>
     </div>
-    <div ns-popover
-         ns-popover-template="app/shared/popoverTest.html"
-            ns-popover-trigger="mouseenter"
-            ns-popover-timeout="0.1">
-        This is the popover - hover over this!
-    </div>
+
+    <!--<div ng-controller="MainTestCtrl" class="container">
+        <a ng-click="openModal()">Click Here</a>
+
+        <modal open="modalOpen" options="{top:35, height:300}" on-close="modalClosed(response)">
+            <div class="panel panel-primary" ng-controller="modalCtrl">
+                <div class="panel-heading">Are you sure?</div>
+                <div class="panel-body">
+                    <div class="btn btn-success" ng-click="close('yes')">Yes</div>
+                    <div class="btn btn-success" ng-click="close('no')">No</div>
+                </div>
+            </div>
+        </modal>
+    </div>-->
     <div ng-show="vm.showSpinner" class="page-splash dissolve-animation">
         <div data-spinner="vm.spinnerOptions"></div>
         <div class="page-splash-message page-splash-message-subtle">{{vm.spinnerMessage}}</div>

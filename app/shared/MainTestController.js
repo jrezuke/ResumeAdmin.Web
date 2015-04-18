@@ -1,5 +1,5 @@
 (function(){
-    angular.module('app').controller('MainCtrl', function($scope) {
+    angular.module('app').controller('MainTestCtrl', function($scope) {
         $scope.openModal = function() {
             $scope.modalOpen = true;
         }

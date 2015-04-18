@@ -4,34 +4,22 @@
     <meta charset="UTF-8">
     <title>Resume Admin</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="bower_components/nsPopover/css/nsPopover.css">
-    <link rel="stylesheet" href="styles/main.css">
 
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <div id="applicationHost" class="container body-content admin-appHost">
     <div data-ng-include="'app/layout/shell.html'"></div>
 </div>
 
-<div>
-    <a ng-click="openModal()">Click Here</a>
 
-    <modal open="modalOpen" options="{top:35, height:300}" on-close="modalClosed(response)">
-        <div class="panel panel-primary" ng-controller="modalCtrl">
-            <div class="panel-heading">Are you sure?</div>
-            <div class="panel-body">
-                <div class="btn btn-success" ng-click="close('yes')">Yes</div>
-                <div class="btn btn-success" ng-click="close('no')">No</div>
-            </div>
-        </div>
-    </modal>
-</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-<script src="bower_components/nsPopover/src/nsPopover.js"></script>
+
 
 <!-- inject:js -->
 <script src="app/app.js"></script>
@@ -44,6 +32,7 @@
 <script src="app/resumes/ResumeModelItemController.js"></script>
 <script src="app/resumes/resumeService.js"></script>
 <script src="app/resumes/SelectOptionsBindDirective.js"></script>
+<script src="app/shared/MainTestController.js"></script>
 <script src="app/shared/modalDirective.js"></script>
 <!-- endinject -->
 </body>

@@ -15,7 +15,7 @@
                 onClose: '&'
             },
             transclude: true,
-            templateUrl: 'modal.html',
+            templateUrl: 'app/shared/modal.html',
             controller: function ($scope) {
                 $scope.close = function () {
                     $scope.modalOpen = false;
